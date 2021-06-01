@@ -8,7 +8,7 @@ def start_teams():
     os.system('echo "%localappdata%/Microsoft/Teams/Update.exe" --processStart "Teams.exe">teamsrunner.bat')
     time.sleep(1)
     os.system("teamsrunner")
-
+    
 start_teams()
 cur_time = datetime.now().strftime("%I:00 %p")
 cur_day = datetime.now().strftime("%A")
@@ -39,6 +39,5 @@ else:
     if(next_i<7):
         tell('You are having'+tt.loc[cur_day][next_i]+'Class at'+timespeak(list(tt.loc[cur_day].index)[next_i]))
     
-
 print(tt)
 
