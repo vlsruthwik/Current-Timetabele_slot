@@ -1,17 +1,15 @@
 import pandas as pd
 import pyttsx3 as ts
 from datetime import datetime
-import thread
+import threading
 import os
-def start_teams(name):
-    os.system('"C:/Users/V.L.S RUTHWIK/AppData/Local/Microsoft/Teams/Update.exe" --processStart "Teams.exe"')
-    
-try:
-    thread.start_new_thread( start_teams, ("") )
-except:
-   print ("Error: unable to start teams")
+import time
+def start_teams():
+    os.system('echo "%localappdata%/Microsoft/Teams/Update.exe" --processStart "Teams.exe">teamsrunner.bat')
+    time.sleep(1)
+    os.system("teamsrunner")
 
-
+start_teams()
 cur_time = datetime.now().strftime("%I:00 %p")
 cur_day = datetime.now().strftime("%A")
 
@@ -43,3 +41,4 @@ else:
     
 
 print(tt)
+
