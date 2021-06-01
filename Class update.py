@@ -1,15 +1,6 @@
 import pandas as pd
 import pyttsx3 as ts
 from datetime import datetime
-import thread
-import os
-def start_teams(name):
-    os.system('"C:/Users/V.L.S RUTHWIK/AppData/Local/Microsoft/Teams/Update.exe" --processStart "Teams.exe"')
-    
-try:
-    thread.start_new_thread( start_teams, ("") )
-except:
-   print ("Error: unable to start teams")
 
 
 cur_time = datetime.now().strftime("%I:00 %p")
