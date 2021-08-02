@@ -20,7 +20,7 @@ def timespeak(s):
     t = s[:s.index(':')]
     return t+" "+s[-2:]
 
-tt = pd.read_csv('S:/Class time.csv')
+tt = pd.read_csv('Class time.csv')
 tt = tt.set_index('week')
 tt = tt.fillna('No')
 times = ['09:00 AM','10:00 AM', '11:00 AM', '12:00 PM', '02:00 PM', '03:00 PM','04:00 PM']
