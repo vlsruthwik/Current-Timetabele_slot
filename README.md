@@ -1,3 +1,3 @@
 # Current-slot
 
-Shortcut this python script to desktop and use it instead of the teams shortcut
+This program speaks out the current slot that you have in your Time table.
