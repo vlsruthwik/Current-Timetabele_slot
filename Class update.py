@@ -36,7 +36,7 @@ else:
     next_i = list(tt.loc[cur_day].index).index(cur_time)+1
     tell('Currently you are having'+sub+'Class')
     
-    if(next_i<len(tt.loc[cur_day].index)-1):
+    if(next_i<len(tt.loc[cur_day].index)):
         tell('You are having'+tt.loc[cur_day][next_i]+'Class at'+timespeak(list(tt.loc[cur_day].index)[next_i]))
 
 print("\nPress Y to show Full Timetable\nPress Enter to Exit")
