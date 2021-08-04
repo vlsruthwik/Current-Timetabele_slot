@@ -1,6 +1,7 @@
 import pandas as pd
 import pyttsx3 as ts
 from datetime import datetime
+import os
 
 
 cur_time = datetime.now().strftime("%I:00 %p")
@@ -19,7 +20,7 @@ def timespeak(s):
     t = s[:s.index(':')]
     return t+" "+s[-2:]
 
-tt = pd.read_csv('S:/Class time.csv')
+tt = pd.read_csv('Class time.csv')
 tt = tt.set_index('week')
 tt = tt.fillna('No')
 times = ['09:00 AM','10:00 AM', '11:00 AM', '12:00 PM', '02:00 PM', '03:00 PM','04:00 PM']
@@ -40,7 +41,6 @@ else:
     if(next_i<len(tt.loc[cur_day].index)-1):
         tell('You are having'+tt.loc[cur_day][next_i]+'Class at'+timespeak(list(tt.loc[cur_day].index)[next_i]))
 
-print("\nPress Enter to Exit")
-input()
-
-
+print("\nPress Y to open Full Timetable\nPress Enter to Exit")
+if input().upper()=="Y":
+    os.startfile("Timetable.png")
