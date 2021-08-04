@@ -1,8 +1,6 @@
 import pandas as pd
 import pyttsx3 as ts
 from datetime import datetime
-import os
-
 
 cur_time = datetime.now().strftime("%I:00 %p")
 cur_day = datetime.now().strftime("%A")
@@ -41,6 +39,11 @@ else:
     if(next_i<len(tt.loc[cur_day].index)-1):
         tell('You are having'+tt.loc[cur_day][next_i]+'Class at'+timespeak(list(tt.loc[cur_day].index)[next_i]))
 
-print("\nPress Y to open Full Timetable\nPress Enter to Exit")
+print("\nPress Y to show Full Timetable\nPress Enter to Exit")
 if input().upper()=="Y":
-    os.startfile("Timetable.png")
+    for day in tt.index:
+        print(day)
+        sub = list(tt.loc[day])
+        for i in range(len(tt.loc[cur_day].index)):
+            print("{} : {}".format(times[i],sub[i]))
+        print()
