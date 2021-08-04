@@ -47,3 +47,5 @@ if input().upper()=="Y":
         for i in range(len(tt.loc[cur_day].index)):
             print("{} : {}".format(times[i],sub[i]))
         print()
+    print("\nPress Enter to Exit")
+    input()
