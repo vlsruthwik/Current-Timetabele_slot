@@ -1,7 +1,6 @@
 import pandas as pd
 import pyttsx3 as ts
 from datetime import datetime
-import webbrowser
 
 
 cur_time = datetime.now().strftime("%I:00 %p")
@@ -43,6 +42,5 @@ else:
 
 print("\nPress Enter to Exit")
 input()
-
 
 
